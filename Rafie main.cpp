@@ -6,9 +6,9 @@ using namespace std;
 void displayCreatedBy() {
     cout << "Dibuat oleh Kelompok 5" << endl;
     cout << "Rafie waldan Valerie" << endl;
-    cout << "M. Azyan Naufan Rosada" << end1;
 }
 
+// Function untuk memilih truth secara acak
 string getRandomTruth() {
     string truths[] = {
         "Apa hal paling konyol yang pernah kamu lakukan?",
@@ -23,6 +23,7 @@ string getRandomTruth() {
     return truths[index];
 }
 
+// Function untuk memilih dare secara acak
 string getRandomDare() {
     string dares[] = {
         "Lakukan tarian lucu di depan semua orang.",
@@ -38,7 +39,7 @@ string getRandomDare() {
 }
 
 int main() {
-    displayCreatedBy(); 
+    displayCreatedBy(); // Menampilkan tulisan "Dibuat oleh Kelompok 5"
 
     srand(time(0));
 
@@ -59,12 +60,13 @@ int main() {
         cout << "Pilihan tidak valid. Silakan pilih truth atau dare." << endl;
     }
 
+    // Kelanjutan setelah pemilihan truth atau dare
     cout << "Apakah kamu ingin bermain lagi? (y/n): ";
     char playAgain;
     cin >> playAgain;
 
     if (playAgain == 'y' || playAgain == 'Y') {
-        main(); 
+        main(); // Mengulangi permainan jika ingin bermain lagi
     } else {
         cout << "Terima kasih telah bermain Truth or Dare!" << endl;
     }
